@@ -1,4 +1,4 @@
-if GetObjectName(GetMyHero()) ~= "Cassiopia" then return end
+
 
 local BonusAD = GetBonusDmg(myHero)
 local BaseAD = GetBaseDamage(myHero)
