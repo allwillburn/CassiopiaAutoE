@@ -7,14 +7,14 @@ CassiopeiaMenu.Farm:Boolean("E", "AutoE", true)
 
 OnTick(function (myHero)
   
-local BonusAD = GetBonusDmg(myHero)
-local BaseAD = GetBaseDamage(myHero)
+local BonusAP = GetBonusDmg(myHero)
+local BaseAP = GetBaseDamage(myHero)
 local EDmg = 52 * GetCastLevel(myHero, _E) + (BaseAP + BonusAP) * 1.1
 local ERange = 700
 
  
-BonusAD = GetBonusDmg(myHero)
-BaseAD = GetBaseDamage(myHero)
+BonusAP = GetBonusDmg(myHero)
+BaseAP = GetBaseDamage(myHero)
 EDmg = 52 * GetCastLevel(myHero, _E) + (BaseAP + BonusAP) * 1.1
 
 --Auto E on minions
