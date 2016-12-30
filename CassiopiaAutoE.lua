@@ -9,13 +9,13 @@ OnTick(function (myHero)
   
 local BonusAP = GetBonusDmg(myHero)
 local BaseAP = GetBaseDamage(myHero)
-local EDmg = 1.9 * GetCastLevel(myHero, _E) + (BaseAP + BonusAP) * 1.
+local EDmg = 2 * GetCastLevel(myHero, _E) + (BaseAP + BonusAP) * 1.
 local ERange = 700
 
  
 BonusAP = GetBonusDmg(myHero)
 BaseAP = GetBaseDamage(myHero)
-EDmg = 1.9 * GetCastLevel(myHero, _E) + (BaseAP + BonusAP) * 1.
+EDmg = 2 * GetCastLevel(myHero, _E) + (BaseAP + BonusAP) * 1.
 
 --Auto E on minions
     for _, minion in pairs(minionManager.objects) do
