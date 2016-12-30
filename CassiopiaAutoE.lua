@@ -5,10 +5,10 @@ local BaseAD = GetBaseDamage(myHero)
 local EDmg = 52 * GetCastLevel(myHero, _E) + (BaseAP + BonusAP) * 1.1
 local ERange = 700
 
-local IreliaMenu = Menu("Cassiopia", "Cassiopia")
+local CassiopiaMenu = Menu("Cassiopia", "Cassiopia")
 
-IreliaMenu:SubMenu("Farm", "Farm")
-IreliaMenu.Farm:Boolean("E", "AutoE", true)
+CassiopiaMenu:SubMenu("Farm", "Farm")
+CassiopiaMenu.Farm:Boolean("E", "AutoE", true)
 
 OnTick(function (myHero)
  
@@ -18,7 +18,7 @@ EDmg = 52 * GetCastLevel(myHero, _E) + (BaseAP + BonusAP) * 1.1
 
 --Auto Q on minions
     for _, minion in pairs(minionManager.objects) do
-        if IreliaMenu.Farm.E:Value() and Ready(_E) and ValidTarget(minion, ERange) and GetCurrentHP(minion) < CalcDamage(myHero,minion,EDmg,0) then
+        if CassiopiaMenu.Farm.E:Value() and Ready(_E) and ValidTarget(minion, ERange) and GetCurrentHP(minion) < CalcDamage(myHero,minion,EDmg,0) then
             CastTargetSpell(minion,_E)
         end
     end
