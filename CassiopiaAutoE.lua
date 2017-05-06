@@ -18,7 +18,7 @@ BaseAP = GetBaseDamage(myHero)
 EDmg = 6 * GetCastLevel(myHero, _E) + (BaseAP + BonusAP) * 1.
 
 --Auto E on minions
-    for _, minion in pairs(minionManager.objects) do
+    for _, closeminion in pairs(minionManager.objects) do
         if CassiopeiaMenu.Farm.E:Value() and Ready(_E) and ValidTarget(closeminion, ERange) and GetCurrentHP(closeminion) < CalcDamage(myHero,closeminion,EDmg,0) then
             CastTargetSpell(closeminion,_E)
         end
