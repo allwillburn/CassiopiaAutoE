@@ -21,7 +21,7 @@ EDmg = 6 * GetCastLevel(myHero, _E) + (BaseAP + BonusAP) * 1.
     for _, minion in pairs(minionManager.objects) do
         if CassiopeiaMenu.Farm.E:Value() and Ready(_E) and ValidTarget(minion, ERange) and GetCurrentHP(minion) < CalcDamage(myHero,minion,EDmg,0) then
             CastTargetSpell(minion,_E)
-        elseif ValidTarget(minion, ERange) and GetCurrentHP(minion) < CalcDamage(myHero,minion,EDmg,0) ~= () then return end
-        
+        elseif ValidTarget(minion, ERange) and GetCurrentHP(minion) < CalcDamage(myHero,minion,EDmg,0) ~= () then return  PrintChat('<font color = "#00FFFF">No minions to kill!')
+        end
     end
 end)
